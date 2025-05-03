@@ -1,0 +1,130 @@
+✅ Airbnb Dynamic Pricing Project – EDA and Data Cleaning Summary
+
+
+---
+
+                                                1. ✅ Dataset Overview
+
+Original Dataset contained 17 columns and 14 lakh+ rows.
+
+Data features included room details, host details, location, pricing, availability, and reviews.
+
+---
+
+                                              2.✅ Data Cleaning Performed
+
+Renamed Columns for clarity (e.g., room_id, room_price, etc.).
+
+Split Coordinates into Latitude and Longitude columns.
+
+Removed Duplicates based on key identifiers.
+
+Dropped Useless Columns:
+
+updated_date (it was outdated and irrelevant).
+
+
+Handled Missing Values:
+
+Reviews missing were filled using the mean value.
+
+Null coordinates were carefully handled.
+
+
+Filtered Price Outliers:
+
+Removed extreme listings with room_price > 1000 USD for realistic analysis.
+
+---
+
+                                           3.✅ Exploratory Data Analysis (EDA)
+
+3.1 Working with Sample Data
+
+Due to the large dataset size (14 lakh+ rows),
+a random sample of 5000 rows was taken for plotting graphs and performing fast analysis.
+
+This ensured better visualization, faster performance, and avoided system crashes.
+
+---
+
+3.2 Price Distribution
+
+Most Airbnb listings are priced between $50 and $250.
+
+Long tail observed with few expensive luxury listings.
+
+
+3.3 Room Type Analysis
+
+Entire Home/Apt listings dominate the dataset (~65-70%).
+
+Private Rooms are second most common.
+
+Shared Rooms and Hotel Rooms are very rare.
+
+
+3.4 Room Type vs Average Price
+
+Entire Home/Apt has the highest average price.
+
+Private Rooms and Shared Rooms are significantly cheaper.
+
+
+3.5 Top 10 Cities by Listings
+
+Cities like New York, Los Angeles, London, Paris, and Sydney have the most Airbnb listings.
+
+
+3.6 Average Price by City
+
+Major tourist cities like New York and London show relatively higher average prices.
+
+
+3.7 Minimum Nights vs Price
+
+No strong direct relation found.
+
+Most bookings were short-term (1–7 nights) based.
+
+
+3.8 Availability vs Price
+
+Availability across 365 days doesn’t directly correlate with higher prices.
+
+
+3.9 Correlation Heatmap
+
+Number of Reviews and Reviews per Month showed strong positive correlation (0.76).
+
+Room Price is largely independent from other numerical features like reviews, minimum nights, and availability.
+
+
+3.10 Room Type Distribution Pie Chart
+
+Visually confirmed that Entire Homes dominate the Airbnb listings.
+
+
+✅ Key Insights (Row-wise)
+
+1) Room price distribution is right-skewed — most listings are priced between $50 and $250, with a few luxury listings priced much higher.
+
+2) Entire Home/Apt listings dominate the dataset, making up around 65-70% of all listings.
+
+3) Private Rooms are the second most common, while Shared Rooms and Hotel Rooms are rare.
+
+4) Entire Home/Apt listings have the highest average price compared to other room types.
+
+5) Cities like New York, Los Angeles, London, Paris, Sydney have the highest number of Airbnb listings.
+
+6) Average prices vary significantly across cities — cities like New York and London have higher average prices.
+
+7) Minimum nights required for booking has no strong direct impact on room price.
+
+8) Availability of listings (number of available days in a year) also does not directly influence room price.
+
+9) Number of Reviews and Reviews Per Month have a strong positive correlation (0.76), meaning properties with more total reviews also have higher monthly reviews.
+
+10) Room Price shows no strong correlation with numerical features like reviews, availability, or minimum nights, meaning price depends more on room type, city, location rather than review counts.
+
+11) During EDA, a sampled dataset (5000 rows) was used instead of the full dataset to ensure better plotting speed and clearer graphs.
